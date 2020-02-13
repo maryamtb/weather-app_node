@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-fluid">
+
+            <div class="main-content text-center">
+
+                {{header}}
+
+                <h1>Weather Forecast ⛅</h1>
+            </div>
+            <div class="container">
+                <h4>This is a simple site for your daily weather reports.</h4>
+            </div>
+            <div class="form-body container">
+                <form>
+                    <div class="input-group input-group-lg" style="margin-top:50px;margin-bottom:50px;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">Enter a location: </span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-lg">
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block" style="padding-top:15px;padding-bottom:15px;margin-bottom:50px;">Search</button>
+                </form>
+            </div>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+    </div>
+    {{>footer}}
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
