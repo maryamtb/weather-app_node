@@ -16,6 +16,7 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "handlebars": ">=4.3.0"
   }
 }
