@@ -15,6 +15,18 @@ body {
     height: 100vh;
 }
 
+.title {
+    font-size: 50px;
+    transform: rotate(-50deg);
+    margin-left:-430px;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    margin-left:-210px;
+  }
+}
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -32,7 +44,7 @@ body {
                 <div class="card-content">
                     <div class="form-body container">
                         <div class="container has-text-centered" style="margin-bottom: 100px;">
-                            <h1 class="title" style="font-size: 50px;transform: rotate(-50deg);margin-left:-430px">
+                            <h1 class="title">
                                 Weather
                             </h1>
                         </div>
