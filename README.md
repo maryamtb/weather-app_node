@@ -1,6 +1,6 @@
 ## Weather Forecast ☀
 
-Instructions: clone or fork then `npm i` then npm start
+Instructions: clone or fork then `npm i` then `npm start`.
 
 ### https://mtb-weather-app.herokuapp.com
 
