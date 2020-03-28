@@ -5,39 +5,122 @@
     <title>Weather</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-
 </head>
 
 <style>
-body {
-    background-color:honeydew;
-    height: 100vh;
-}
+    
+    body {
+        background-color: honeydew;
+        height: 100%;
+    }
 
-.title {
-    font-size: 50px;
-    transform: rotate(-50deg);
-    margin-left:-430px;
-}
+    .title {
+        font-size: 50px;
+        transform: rotate(-50deg);
+        margin-left: -430px;
+    }
 
-@media screen and (max-width: 600px) {
-  .title {
-    margin-left:-210px;
-  }
-}
+    .cloud {
+        font-size: 70px;
+        position: relative;
+        animation: cloud 20s cubic-bezier(0.5, 0.1, 0.1, 0.5) infinite alternate;
+    }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  height: 2.5rem;           
-}
+    @keyframes cloud {
+        0% {
+            left: 800px;
+            top: 0px;
+        }
 
+        50% {
+            left: 1200px;
+            top: 0px;
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    .sun {
+        font-size: 60px;
+        position: relative;
+        z-index: 1;
+        animation: sun 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes sun {
+        0% {
+            left: 800px;
+            top: 80px;
+        }
+
+        100% {
+            left: 600px;
+            top: 800px;
+        }
+    }
+
+    .bolt {
+        font-size: 60px;
+        position: relative;
+        animation: bolt 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes bolt {
+        0% {
+            left: 780px;
+            top: -30px;
+        }
+
+        100% {
+            left: 10px;
+            top: 800px;
+        }
+    }
+
+    .rain {
+        font-size: 60px;
+        position: relative;
+        animation: rain 8s ease-in-out infinite;
+    }
+
+    @keyframes rain {
+        0% {
+            left: 900px;
+            top: 0px;
+        }
+
+        100% {
+            left: 800px;
+            top: 800px;
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .title {
+            margin-left: -210px;
+        }
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: 2.5rem;
+    }
 </style>
 
 <body>
-    <section class="section">
+    <span class="cloud">☁️</span>
+    <span class="sun">☀️</span>
+    <span class="bolt">⚡</span>
+    <span class="rain">🌧️</span>
+    <section class="section" >
+
         <div class="container">
             <div class="card" style="width: 500px;">
                 <div class="card-content">
@@ -47,9 +130,8 @@ body {
                                 Weather
                             </h1>
                         </div>
-                        <form  class="has-text-centered">
-                            <div class="input-group input-group-lg"
-                                style="margin-top:20px;margin-bottom:20px;">
+                        <form class="has-text-centered">
+                            <div class="input-group input-group-lg" style="margin-top:20px;margin-bottom:20px;">
                                 <input class="input is-rounded" type="text" placeholder="Try 'Miami Beach'">
                             </div>
                             <button class="button is-black is-warning ">Search</button>
@@ -58,22 +140,24 @@ body {
                 </div>
             </div>
         </div>
+
         <section class="section" style="margin-top:60px">
-            <div class="card" >
-                        <div class="card-content">
-                            <div class="form-body container">
-                                        <p style="font-size: 25px;color:black" id="message-1"></p>
-                                        <p id="message-2"></p>
-                            </div>
-                        </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="form-body container">
+                        <p style="font-size: 25px;color:black" id="message-1"></p>
+                        <p id="message-2"></p>
                     </div>
+                </div>
+            </div>
             </div>
         </section>
     </section>
     <footer id="footer">
-            <p>
-                Made by <a href="https://github.com/maryamtb" style="color: black;border: 2px solid hsl(48, 100%, 67%);  background-color:hsl(48, 100%, 67%);">MTB.</a>
-            </p>
+        <p>
+            Made by <a href="https://github.com/maryamtb"
+                style="color: black;border: 2px solid hsl(48, 100%, 67%);  background-color:hsl(48, 100%, 67%);">MTB.</a>
+        </p>
         </p>
     </footer>
 
