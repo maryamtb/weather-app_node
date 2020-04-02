@@ -97,8 +97,10 @@ body {
 
 @media screen and (max-width: 600px) {
     .title { margin-left: -265px; }
-    #message-1 { font-size: 18px; }
+    #message-1 { font-size: 17px; }
     #message-2 { font-size: 16px; }
+    #footer {margin-top: 50px;}
+    body {height: 120%;}
 }
 
 #footer {
