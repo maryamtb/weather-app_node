@@ -1,0 +1,106 @@
+body {
+    background-color: honeydew;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 50px;
+    transform: rotate(-50deg);
+    margin-left: -430px;
+}
+
+.cloud {
+    font-size: 70px;
+    position: relative;
+    animation: cloud 20s cubic-bezier(0.5, 0.1, 0.1, 0.5) infinite alternate;
+}
+
+@keyframes cloud {
+    0% {
+        left: 800px;
+        top: 0px;
+    }
+
+    50% {
+        left: 1200px;
+        top: 0px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.sun {
+    font-size: 60px;
+    position: relative;
+    z-index: 1;
+    animation: sun 10s ease-in-out infinite alternate;
+}
+
+@keyframes sun {
+    0% {
+        left: 800px;
+        top: 80px;
+    }
+
+    100% {
+        left: 600px;
+        top: 800px;
+    }
+}
+
+.bolt {
+    font-size: 60px;
+    position: relative;
+    animation: bolt 5s ease-in-out infinite alternate;
+}
+
+@keyframes bolt {
+    0% {
+        left: 780px;
+        top: -30px;
+    }
+
+    100% {
+        left: 10px;
+        top: 800px;
+    }
+}
+
+.rain {
+    font-size: 60px;
+    position: relative;
+    animation: rain 8s ease-in-out infinite;
+}
+
+@keyframes rain {
+    0% {
+        left: 900px;
+        top: 0px;
+    }
+
+    100% {
+        left: 800px;
+        top: 800px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .title {
+        margin-left: -210px;
+    }
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 2.5rem;
+}
