@@ -7,7 +7,6 @@ body {
 }
 
 .title {
-    font-size: 50px;
     transform: rotate(-50deg);
     margin-left: -430px;
 }
@@ -90,11 +89,16 @@ body {
     }
 }
 
+#message-1 {
+    font-size: 23px;
+    color:black;
+}
+
 
 @media screen and (max-width: 600px) {
-    .title {
-        margin-left: -210px;
-    }
+    .title { margin-left: -265px; }
+    #message-1 { font-size: 18px; }
+    #message-2 { font-size: 16px; }
 }
 
 #footer {
