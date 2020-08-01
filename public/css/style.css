@@ -94,6 +94,11 @@ body {
     color:black;
 }
 
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
 
 @media screen and (max-width: 600px) {
     .title { margin-left: -265px; }
