@@ -1,5 +1,4 @@
 const request = require("request");
-const Darkmode = require("darkmode-js");
 
 const forecast = (latitude, longitude, callback) => {
   const url =
@@ -7,22 +6,7 @@ const forecast = (latitude, longitude, callback) => {
     latitude +
     "," +
     longitude;
-  const options = {
-    top: "0px",
-    right: "unset",
-    left: "32px",
-    time: "0.5s",
-    mixColor: "#fff",
-    backgroundColor: "#fff",
-    buttonColorDark: "#100f2c",
-    buttonColorLight: "#fff",
-    saveInCookies: false,
-    label: "🌓",
-    autoMatchOsTheme: true,
-  };
-  const darkmode = new Darkmode(options);
-  darkmode.toggle();
-  darkmode.showWidget();
+
 
   request({ url, json: true }, (error, { body }) => {
     var inCelsius = ((body.currently.temperature - 32) * 5) / 9;
